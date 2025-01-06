@@ -1,0 +1,150 @@
+Training
+Web Development (Front-end, Back-end, Database):
+
+Front-end:
+1)HTML (Hypertext Markup Language):
+Text – Content
+Hyper Text – A Text containing multiple links
+Markup Language – specific set of tags by using these we can create content structure for the websites.
+2)CSS (Cascading Style Sheets):
+Used to style the content of the website.
+3)JavaScript:
+It is used to create dynamic websites.
+It is scripting language (it doesn’t require compiler and not a programming language).
+It is a loosely typed language.
+It is a lightweight and dynamic language used to build user interface.
+It is introduced in year 1995 by Brenden Eich.
+Applications of js:
+Mobile apps, web apps, gaming, server-side apps.
+
+Variables:
+They are used to store the data. 
+Variables are case – sensitive. 
+Start with letters, _(underscore), $(dollar sign).
+ Can’t start with numbers. Reserved words (keywords) not allowed.
+ Allow letters, _(underscore), $(dollar sign), numbers.
+1.	let 
+2.	var
+3.	const
+Reassigning:
+•	Reassign variables is possible by var
+•	var n = 1;
+•	        n = 5;
+•	        n = n + n;
+•	        console.log(n + n);
+Output: 10
+•	Reassign variables is possible by let
+•	<script>
+•	        let n = 1;
+•	        n = 5;
+•	        console.log(n + n);
+•	    </script>
+Output: 10
+•	Reassign not accepted by the const
+•	<script>
+•	        const n = 1;
+•	        n = 5;
+•	        console.log(n + n);
+•	    </script>
+Output: Uncaught TypeError: Assignment to constant variable.
+    at index.html: 12:11
+
+Redeclaring:
+	Redeclaring with var is possible
+	<script>
+	        var n = 1;
+	        var n = 5;
+	        console.log(n + n);
+	    </script>
+Output: 10
+	Redeclaring with let is no accepted.
+	<script>
+	        let n = 1;
+	        let n = 5;
+	        console.log(n + n);
+	    </script>
+Output: Uncaught Syntax Error: Identifier 'n' has already been declared (at index.html: 12:13)
+	Redeclaring with const not accepted.
+	<script>
+	        const n = 1;
+	        const n = 5;
+	        console.log(n + n);
+	 </script>
+Output: Uncaught Syntax Error: Identifier 'n' has already been declared (at index.html: 12:13)
+Block Scope:
+	Var block scope is not accepted.
+	<script>
+	        var n = 1;
+	        {
+	            var n = 5;
+	            console.log(n);
+	        }
+	        console.log(n);
+	    </script>
+Output: 5
+5
+	Let block scope is allowed.
+	<script>
+	        let n = 1;
+	        {
+	            let n = 5;
+	            console.log(n);
+	        }
+	        console.log(n);
+	    </script>
+Output: 5
+1 
+	Const allows the block scope.
+	<script>
+	        const n = 1;
+	        {
+	            const n = 5;
+	            console.log(n);
+	        }
+	        console.log(n);
+	    </script>
+Output: 5
+1
+
+
+
+
+<script>
+        var n = 1;
+        var n = 6;
+        {
+            var n = 5;
+            console.log(n);
+        }
+        console.log(n);
+    </script>
+Output: 5
+5
+
+<script>
+        let n = 1;
+
+        {
+            let n = 5;
+            console.log(n);
+        }
+        let n = 6;
+        console.log(n);
+    </script>
+Output: Error
+
+<script>
+        const n = 1;
+
+        {
+            const n = 5;
+            console.log(n);
+        }
+        const n = 6;
+        console.log(n);
+    </script>
+Output: Error
+
+
+
+Implemented in VScode
