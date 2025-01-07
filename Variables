@@ -146,5 +146,28 @@ Output: Error
 Output: Error
 
 
+DATA TYPES:
+1.	Primitive data types
+2.	Non – Primitive data type
+
+To check the data type – typeOf()
+
+•	Primitive data type: Predefined, we can store single values
+•	Numbers: integers, float
+•	String: Stream of characters enclosed in quotes
+•	Boolean: true or false
+•	Null: Empty value or no value
+•	Undefined: declared variable with no value
+
+1.	Numbers: 1, -1, 2, 3.4, 5.5
+2.	Strings – Stream of characters enclosed in quotes. Single, double, backtick quotes introduced in ES6 version, it provides extra functionality , we can insert values.
+3.	String concatenation: 
+4.	<script>
+5.	        let a = "Sai";
+6.	        let b = 'Kumar';
+7.	        let age = '=';
+8.	        let greeting = `Reactjs Student ${age} ${a} ${b}`;
+9.	        document.write(greeting);
+10.	    </script>
 
 Implemented in VScode
