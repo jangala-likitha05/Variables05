@@ -170,4 +170,68 @@ To check the data type – typeOf()
 9.	        document.write(greeting);
 10.	    </script>
 
+
+JavaScript Operators:
+1.	Arithmetic Operators: +, -, *, / (quotient), % (remainder), ** (exponential), ++, --
+2.	<script>
+3.	        let a = 10;
+4.	        let b = 5;
+5.	        b++;
+6.	        a--;
+7.	        document.write(a % b,'<br>');
+8.	        document.write(a / b,'<br>');
+9.	        document.write(a * b, '<br>');
+10.	        document.write(a ** b,'<br>');
+11.	        document.write(b,'<br>');
+12.	        document.write(a,'<br>');
+13.	    </script>
+Output:
+3
+1.5
+54
+531441
+6
+9
+2.	Assignment Operators: =, ===, +=, /=
+3.	let a = 10;
+4.	a += 30;
+5.	document.write(a,'<br>');
+Output:
+40
+3.	Logical Operators: &&(and), ||(or), !(not)
+4.	<script>
+5.	        let a = 10;
+6.	        let b = 5;
+7.	        a += 30;
+8.	        document.write(a>b && b>11,'<br>');
+9.	        document.write(a>b || b>11,'<br>');
+10.	        document.write(!true,'<br>');
+11.	  </script>
+Output:
+false
+true
+false
+4.	Relational Operators: <, >, <=, >=, ==, ===, !=, !==, ?(ternary Operator)
+5.	<script>
+6.	        let a = 10;
+7.	        let b = '10';
+8.	        document.write(a == b,'<br>');
+9.	        document.write(a === b,'<br>');
+10.	        document.write(a !== b,'<br>');
+11.	        document.write(a != b,'<br>');
+12.	        document.write(a>b ? 'a is greater than b' : 'b is greater than a');
+13.	
+14.	        
+15.	    </script>
+Output:
+true
+false
+true
+false
+a is greater than b
+Window Methods:
+1.	alert() – used to give a alert.
+2.	prompt() – used to take input
+
+
 Implemented in VScode
