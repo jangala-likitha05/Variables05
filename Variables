@@ -233,5 +233,76 @@ Window Methods:
 1.	alert() – used to give a alert.
 2.	prompt() – used to take input
 
+Conditional Statements: To make the set of instructions execute only when the given condition is True. Used to decide whether the code has to be executed or skip based on the given condition. Executed line by line in a sequence.
+Block of code: Set of instructions. It will execute only when the given condition is True 
+Condition: An expression that evaluates a result (True or False).
+Methods: if, if else, switch, ternary operator.
+If condition: only executes when the condition is true. Only one possible condition.
+Syntax: 
+if(condition){
+block of code
+}
+Code:
+<script>
+        let a = 4;
+        let b = 6;
+        if(a<b) {
+            document.write('b is greater than a','<br>');
+        }
+        document.write('Good Morning.')
+    </script>
+Output:
+b is greater than a
+Good Morning.
+
+If Else:
+<script>
+        let a = 4;
+        let b = 6;
+        if(a<b) {
+            document.write('b is greater than a','<br>');
+        }else{
+        document.write('Good Morning.');
+        }
+    </script>
+Output:
+b is greater than a
+else if:
+<script>
+        let a = prompt("Enter your age?");
+        let b = prompt("Enter your name?");
+        if(a < 18){
+            alert(b + " you are too young to marry");
+            document.write("Too young");
+        }else if(a > 35){
+            alert(b + " you are old to marry");
+            document.write("Too old");
+        }else{
+            alert(b + " perfect age to marry");
+            document.write("Perfect");
+        }
+        alert("Welcome to My world");
+    </script>
+Input: 18
+Rose
+Output:
+Perfect age to marry.
+
+
+
+
+Question:
+Write a program that reads the scores A and B of two players and checks if one of the scores is greater than 300 and sum of the scores is less than 500.
+<script>
+        let a = parseInt(prompt("Enter your score"));
+        let b = parseInt(prompt("Enter your score"));
+        if((a > 300 || b > 300) && (a+b < 500)){
+            document.write("can team up");
+        }else{
+            document.write("cannot team up");
+        }
+    </script>
+
+
 
 Implemented in VScode
