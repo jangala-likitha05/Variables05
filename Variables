@@ -303,6 +303,70 @@ Write a program that reads the scores A and B of two players and checks if one o
         }
     </script>
 
+•	Write  a program to check whether the number is divisible by 2 and 3 and both (take prompt).
+•	let a = parseInt(prompt("Enter Number1:"));
+•	if(a % 2 ===0 && a % 3 === 0)){
+•	            document.write('Number divisible by both');
+•	        }
+•	else{
+•	      document.write(‘Number not divisible by both’);
+•	}
+
+•	Write a program to find the largest number among three numbers.
+
+let a = parseInt(prompt("Enter Number1:"));
+let b = parseInt(prompt("Enter Number2:"));
+let c = parseInt(prompt("Enter Number3:"));
+if(a > b && a > c){
+            document.write(a + ' is greater');
+        }else if(b > a && b > c){
+            document.write(b + ' is greater');
+        }else{
+            document.write(c + ' is greater');
+        }
+
+•	Accept the following from the user and calculate the percentage of classes attended:
+a)	Total number of working days
+b)	Total number of days for absent
+c)	let workingDays = parseInt(prompt('Enter number of working days:'));
+d)	        let absentDays = parseInt(prompt('Enter number of days absent:'));
+e)	        let present = workingDays - absentDays;
+f)	        let percent = Math.round(((present / workingDays) * 100) ,                   2);
+g)	        if(percent < 75){
+h)	            document.write(percent + ' Not Eligible for writing exam.')
+i)	        }else{
+j)	            document.write(percent + ' Eligible for writing exam');
+k)	        }
+
+•	A company decided to give bonus to employee according to the following criteria:
+Time period of service                Bonus
+More than 10 years                      10%
+>= 6 and <=10                                8%
+Less than 6 years                         5%
+Ask the user for their salary and years of service and print the bonus amount.
+let salary = parseInt(prompt('Enter the salary: '));
+        let years = parseInt(prompt('Enter the no of years: '));
+        if(years > 10){
+            document.write('Bonus with Salary: ' + (salary + (salary * 0.1)));
+        }else if(years >= 6 && years <= 10){
+            document.write('Bonus with Salary: ' + (salary + (salary * 0.08)));
+        }else if(salary < 6){
+            document.write('Bonus with Salary: ' + (salary + (salary * 0.05)));
+        }else{
+            document.write('No Bonus with Salary');
+        }
+
+Switch:
+Syntax: 
+switch(expression){
+case value:
+          code
+           break
+default:
+          code
+}
+
+
 
 
 Implemented in VScode
