@@ -461,11 +461,51 @@ for(let i = 2;i<=9;i=i+2){
         //8 + 3 = 11
 
 
-2.	For each loop
-
 3.	For of
-4.	While
-5.	Do while
+4.	<script>
+5.	        let t = ['H','J','G','t'];
+6.	        for(let i of t){
+7.	            document.write(i,'<br>');
+8.	        }
+9.	    </script>
+10.	For in loop
+<script>
+        let t = 'Hello ';
+        for(let i in t){
+            document.write(t[i],'<br>');
+        }
+    </script>
+
+11.	While
+Syntax: while(condition) {
+//block of code
+}
+<script>
+        let t = 1;
+        while(t<6){
+            document.write(t,'<br>');
+            t++;
+        }
+</script>
+
+12.	Do while
+Syntax: do {
+//block of code
+} while(condition)
+let t = 0;
+        do{
+            document.write(t + 1,'<br>');
+            t = t + 2;
+        }while(i < 5)
+
+
+for(let i=2;i<=8;i = i + 2){
+            if(i > 4){
+                break;
+            }
+            document.write(i + 1,'<br>');
+        }
+
 
 
 
