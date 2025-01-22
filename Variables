@@ -505,6 +505,76 @@ for(let i=2;i<=8;i = i + 2){
             }
             document.write(i + 1,'<br>');
         }
+<script>
+        for(let i=2;i<=8;i = i + 1){
+            if(i > 5){
+                continue;
+            }
+            document.write(i + 2,'<br>');
+        }
+        //i=2, 2 > 5, false, 2 + 2 = 4, i = i + 1 = 3
+        //i=3, 3 > 5, false, 3 + 2 = 5, i = i + 1 = 4
+        //i=4, 4 > 5, false, 4 + 2 = 6, i = i + 1 = 5
+        //i=5, 5 > 5, false, 5 + 2 = 7, i = i + 1 = 6
+        //i=6, 6 > 5, true, skip to next iteration
+    </script>
+
+Nested Loops:
+A loop inside another loop.
+The inner loop will execute one time for each iteration of outer loop.
+An inner loop within the repeating block of outer loop.
+<script>
+        for(let i=1;i<=3;i++){
+            document.write(i,'<br>');
+            for(let j = 1;j<=4;j++){
+                document.write(j," ");
+            }
+            document.write('<br>')
+        }
+    </script>
+
+Output: 
+1
+1 2 3 4
+2
+1 2 3 4
+3
+1 2 3 4
+
+<script>
+        for(let i=1;i<=5;i++){
+            for(let j = 1;j<=i;j++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    </script>
+ 
+Output:
+*
+**
+***
+****
+*****
+<script>
+        for (let i = 1; i <= 4; i++) {
+      for (let j = 1; j <= 4 - i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 1; k <= i; k++) {
+        document.write("*");
+      }
+      document.write("<br>");
+    }
+    document.write("<br>");
+    </script>
+
+
+Output:
+   *
+  **
+ ***
+****
 
 
 
