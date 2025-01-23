@@ -576,7 +576,37 @@ Output:
  ***
 ****
 
+Functions:
+A function is reusable block of code.
+It can be called anywhere in the program.
+Parameters: Values which are declared inside the program while defining a function.
+Arguments: values which are passed through the parameters at the time of calling the function.
+<script>
+        function greet(a,b){
+          document.write(a + b);
+        }
+        let a = parseInt(prompt("Enter a:"));
+        let b = parseInt(prompt("Enter b:"));
+        greet(a,b);
+    </script>
 
+<script>
+        prime = function(a){
+          if(a < 1){
+            return 'Invalid';
+          }else {
+            for (let i = 2; i < a; i++) {
+              if (a % i == 0) {
+                return("Not a prime number",'<br>');
+              }else{
+                return("Prime number",'<br>');
+              }
+          }
+        }
+      }
+      let res = prime(9);
+      document.write(res);
+    </script>
 
 
 
