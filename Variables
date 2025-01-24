@@ -608,6 +608,84 @@ Arguments: values which are passed through the parameters at the time of calling
       document.write(res);
     </script>
 
+Arrow functions:
+Es6 version, more readable and more structure, anonymous functions (lambda functions), without function name but they are assigned to a variable.
+Ex: Arrow functions without parameter
+let C = () => {
+//block of code
+}
+C();
+Arrow functions with parameter
+let C = (x,y) => {
+console.log(x + y);
+}
+C(20,30);
+<script>
+        let sum = (x,y) =>{
+          document.write(x + y,'<br>');
+        }
+        sum(5,7);
+        sum(20,30);
+    </script>
+
+With one argument:
+<script>
+        let sum = x => document.write(x ,'<br>');
+        sum(5);
+        sum(20);
+    </script>
+
+Without one argument:
+<script>
+        let sum = () => document.write(‘hello’,'<br>');
+        sum();
+        sum();
+    </script>
+
+Synchronous function:
+Executes line by line
+<script>
+        function t1(){
+          document.write('Task 1' , '<br>');
+        }
+
+        function t2(){
+          document.write('Task 2' , '<br>');
+        }
+
+        function t3(){
+          document.write('Task 3' , '<br>');
+        }
+
+        t1();
+        t2();
+        t3();
+    </script>
+
+
+Asynchronous functions:
+<script>
+        document.write('Hello','<br>');
+        setTimeout(() =>{
+          document.write('World');
+        },1000);
+        document.write('javascript',"<br>");
+    </script>
+
+CallBack function:
+A call function is function that is passed argument to another function.
+Ex:
+<script>
+        function greet(name,callback){
+          document.write(`Hello, ${name}`,'<br>');
+          callback();
+        }
+
+        function sayGoodBye(){
+          document.write('Good Bye','<br>');
+        }
+        greet('Samantha',sayGoodBye);
+    </script>
 
 
 
