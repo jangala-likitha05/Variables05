@@ -687,6 +687,35 @@ Ex:
         greet('Samantha',sayGoodBye);
     </script>
 
+mainFunction takes a callback as parameter callback function is passed to mainFunction.
+
+Using anonymous function:
+const greet = function( str,callback ) {
+            console.log("Welcome to ", str);
+            callback();
+        };
+        const sayGoodBye = function(){  
+          console.log("Good Bye");
+          };
+          greet('Samantha',sayGoodBye);
+
+
+
+
+Asynchronous callback with setTimeout:
+Code: 
+function fetchData (callback) {
+        document.write ('Fetching data…',"<br>");
+        setTimeout(function(){
+          callback ();
+                document.write  ('Data Fetched','<br>');
+        },2000);
+      }
+
+      function processData(){
+        document.write  ('Processing the fetch data',"<br>");
+        }
+        fetchData(processData);
 
 
 
