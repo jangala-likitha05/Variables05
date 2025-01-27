@@ -716,6 +716,79 @@ function fetchData (callback) {
         document.write  ('Processing the fetch data',"<br>");
         }
         fetchData(processData);
+Promise:
+Promise is a special javascript object that represents an eventual completion (or failure) of an asynchronous operation.
+1)	Three states
+•	Pending: the initial state, the promise is still waiting for the operation to finish
+•	Fulfilled: the operation completed successfully
+•	Rejected: the operation failed.
+Ex:
+To create a promise new Promise ();
+The promise constructor takes a function with two parameters:
+Resolve – to mark as the promise is successful
+Reject – to mark it as failed
+Handling:
+.then() method is called when the promise is fulfilled.
+It receives the result from the resolve();
+.catch() method is called when the promise is rejected();
+It receives the result from reject();
+
+
+<script>
+        let mypromise = new Promise((resolve,reject) =>{
+          let success = true;
+          if(success){
+            resolve('The operation was successfully.');
+          }else{
+            reject('the operation failed.');
+          }
+        });
+
+        mypromise.then(result => {
+          console.log(result);
+        }).catch(err =>{
+          console.log(err);
+        })
+    </script>
+
+Chaining Promises:
+<script>
+        let mypromise = new Promise((resolve, reject)=>{
+            resolve(5);
+        });
+
+        mypromise
+        .then(result =>{
+          console.log(result);
+          return result * 2;
+        })
+        .then(result =>{
+          console.log(result);
+          return result + 3;
+        })
+        .then(result => {
+          console.log(result);
+        }).catch(err =>{
+          console.log(err);
+        })
+    </script>
+
+Promise with setTimeout:
+Using setTimeout the promise will resolve after certain amount of time3.
+<script>
+        let mypromise = new Promise((resolve, reject)=>{
+          setTimeout(() => {
+            resolve(5);
+        }, 2000);
+        });
+
+        mypromise
+        .then(result => {
+          console.log(result);
+        }).catch(err =>{
+          console.log(err);
+        })
+    </script>
 
 
 
