@@ -816,6 +816,33 @@ In DOM all elements are defined as objects
 	let k = document.getElementsByTagName('h1');
 	        document.write(k);
 	Getting element by query selector
+	Used to select HTML element with classname, tagname 
+
+Manipulate Elements:
+To create a HTML element
+•	createElement()
+•	the method used to create a html element
+•	let k = document.createElement('h1');
+•	        k.className = 'b';
+•	        k.textContent = 'Hello';
+•	        console.log(k)
+•	        document.body.appendChild(k);
+
+let k = ['dwija','jayadeep','jithya'];
+        for(let i = 0;i<k.length;i++){
+          let t = document.createElement('h2');
+          t.className = 'a';
+          t.textContent = k[i];
+          document.body.appendChild(t);
+        }
+
+let k;
+        for(let i = 0;i<3;i++){
+          let t = document.createElement('h1');
+          t.className = 'a';
+          t.textContent = i;
+          document.body.appendChild(t);
+        }
 
 
 
