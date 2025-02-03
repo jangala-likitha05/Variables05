@@ -845,6 +845,11 @@ let k;
         }
 
 
+ReactJS:
+node -v
+npm -v
+npx create-react-app app-name
+npm start
 
 
 
