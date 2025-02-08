@@ -974,6 +974,66 @@ import React from "react";
     }
 
 export default FruitList;
+light Bulb On:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .light-bulb{
+        height: 350px;
+        width: 200px;
+      }
+      #body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        padding: 50px;
+      }
+      .button{
+        padding: 10px;
+        background-color: brown;
+        border-radius: 5px;
+        /* height: 50px;
+        width: 100px; */
+        color: #fff;
+        font-family: "Roboto";
+        font-size: 20px;
+        border: 2px solid #fff;
+      }
+    </style>
+</head>
+<body id="body">
+  <img id="bulbImg" class="light-bulb" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png">
+  <button id="toggleButton" class="button" onclick="lightBulbOn()">Turn on</button>
+  <script>
+    let isOn = false;
+    function lightBulbOn() {
+      const body = document.getElementById('body');
+      const bulbImg = document.getElementById('bulbImg');
+      const toggleButton = document.getElementById('toggleButton');
+      if(isOn =! isOn){
+        body.style.backgroundColor = "red";
+        bulbImg.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+        toggleButton.textContent = "Turn off";
+      }else{
+        body.style.backgroundColor = "lightyellow";
+        bulbImg.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+        toggleButton.textContent = "Turn on";
+      }
+    }
+  </script>
+</body>
+</html>
+
+State in React:
+In react, state is like a container that holds the data or information for a component.
 
 
 
