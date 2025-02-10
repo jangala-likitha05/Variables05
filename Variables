@@ -1033,7 +1033,49 @@ light Bulb On:
 </html>
 
 State in React:
-In react, state is like a container that holds the data or information for a component.
+In react, state is like a container that holds the data or information for a component. Is an essential part in react because it allows components to be dynamic, interactive and capable of responding to user input or change over time.
+Functional components:
+Syntax:
+Const[statevariable,setStateFunction] = useState(initialvalue)
+UseState:
+Allows you to add to functional components.
+Syntax: const[State,setState] = useState
+
+
+import React, { useState } from "react";
+import './App.css';
+// import FruitList from './React/Greetings'
+
+const Counter = () =>{
+  const [count, setCount] = useState(0);
+  return(
+    <div className="App">
+      <h1 className="heading-count">{count}</h1>
+      <button className="count-btn" onClick={()=>setCount(count+1)}>Increment</button>
+      <button className="count-btn" onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+
+export default Counter;
+
+import React, { useState } from "react";
+import './App.css';
+// import FruitList from './React/Greetings'
+
+const Counter = () =>{
+  const [count, setCount] = useState(0);
+  return(
+    <div className="App">
+      <h1 className="heading-count">{count}</h1>
+      <button className="count-btn" onClick={()=>setCount(count+1)}>Increment</button>
+      <button className="count-btn" onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+  )
+}
+
+export default Counter;
+
 
 
 
