@@ -1,0 +1,34 @@
+import React from "react";
+
+const UserProfile = () => {
+    return(
+        <div className="card-direction"> 
+            <div className="card">
+                <img className="imageProfile" src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?ga=GA1.1.1243180153.1739252887&semt=ais_hybrid"/>
+                <div>
+                    <p>Arjun</p>
+                    <p>Age: <span>25</span></p>
+                    <p>Location: <span>Kasi</span></p>
+                </div>
+            </div> 
+        <div className="card">
+            <img className="imageProfile" src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?w=740"/>
+            <div>
+            <p>Username: <span>JohnDoe</span></p>
+            <p>Age: <span>25</span></p>
+            <p>Location: <span>USA</span></p>
+            </div>
+        </div> 
+        <div className="card">
+            <img className="imageProfile" src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?ga=GA1.1.1243180153.1739252887&semt=ais_hybrid"/>
+            <div>
+            <p>Username: <span>JohnDoe</span></p>
+            <p>Age: <span>25</span></p>
+            <p>Location: <span>USA</span></p>
+            </div>
+        </div> 
+        </div>  
+    )
+}
+
+export default UserProfile;
