@@ -1076,6 +1076,52 @@ const Counter = () =>{
 
 export default Counter;
 
+React memo:
+It is a HOC (high order component) is not a react hook
+It will stop unnecessary – rendering of functional components of its props
+It will improve the performance of the functional components.
+App.js
+import './App.css';
+import ChildA from "./React/ChildA";
+import ChildB from "./React/ChildB";
+import React,{useState} from 'react';
+const Parent = () =>{
+  const[count,setCount] = useState(0);
+  const increment = () =>{
+    setCount(c => c + 1);
+  };
+  return (
+    <div>
+      <ChildA/>
+      <ChildB count={count} increment={increment}/>
+    </div>
+  )
+};
+export default Parent;
+
+ChildA.jsx
+import {memo} from 'react';
+const ChildA = () =>{
+    console.log("Child A rendered");
+    return (
+        <h2>This is Child A</h2>
+    )
+};
+
+export default memo(ChildA);
+
+ChildB.jsx:
+const ChildB = ({count,increment}) =>{
+    console.log('Child B rendered');
+    return(
+        <div>
+            <h2>Count : {count}</h2>
+            <button onClick={increment} className="btn">Increment</button>
+        </div>
+    )
+};
+
+export default ChildB;
 
 
 
