@@ -1123,6 +1123,107 @@ const ChildB = ({count,increment}) =>{
 
 export default ChildB;
 
+prop drilling:
+process of passing data from parent component to deeply (nested) child component through intermediate components, by passing
+import React from "react";
+
+function App(){
+  const d = 'I am likitha'
+  return (
+    <div>
+      <User1 d = {d}/>
+    </div>
+  )
+}
+
+function User1({d}){
+  return (
+    <User2 d={d}/>
+  )
+}
+
+function User2({d}){
+  return (
+    <User3 d={d}/>
+  )
+}
+
+function User3({d}){
+  return (
+    <User4 d={d}/>
+  )
+}
+
+function User4({d}){
+  return <div>{d}</div>
+}
+
+export default App;
+
+import React,{createContext, useContext} from "react";
+
+const context = createContext();
+function App(){
+  const d = 'I am likitha'
+  return (
+    <context.Provider value={d}>
+      <User1/>
+    </context.Provider>
+  )
+}
+
+function User1(){
+  return (
+    <User2/>
+  )
+}
+
+function User2(){
+  return (
+    <User3/>
+  )
+}
+
+function User3(){
+  return (
+    <User4/>
+  )
+}
+
+function User4(){
+  const d = useContext(context);
+  return (
+    <div>{d}</div>
+  )
+}
+
+export default App;
+
+
+import React,{createContext,useContext} from "react";
+
+const context = createContext();
+function App(){
+  const name = "likitha";
+  const email = "likitha@email.com";
+  return (
+    <context.Provider value={{name,email}}>
+      <Profile/>
+    </context.Provider>
+  )
+}
+
+function Profile(){
+  const d = useContext(context);
+  return (
+    <div>
+      <h1>{d.name}</h1>
+      <h2>{d.email}</h2>
+    </div>
+  )
+}
+
+export default App;
 
 
 Implemented in VScode
