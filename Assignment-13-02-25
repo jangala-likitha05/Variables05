@@ -1,0 +1,56 @@
+import React,{createContext,useContext} from "react";
+
+const context = createContext();
+function App(){
+  const name = "likitha";
+  const email = "likitha@email.com";
+  return (
+    <context.Provider value={{name,email}}>
+      <Profile/>
+    </context.Provider>
+  )
+}
+
+function Profile(){
+  const d = useContext(context);
+  return (
+    <div>
+      <h1>{d.name}</h1>
+      <h2>{d.email}</h2>
+    </div>
+  )
+}
+
+export default App;
+
+
+import React from "react";
+
+// App Component
+const App = () => {
+  const user = { name: "likitha", email: "liktha@gmail.com" };
+  return <Parent user={user} />;
+};
+
+// Parent Component
+const Parent = ({ user }) => {
+  return <Child user={user} />;
+};
+
+// Child Component
+const Child = ({ user }) => {
+  return <Profile user={user} />;
+};
+
+// Profile Component
+const Profile = ({ user }) => {
+  return (
+    <div>
+      <h2>User Profile</h2>
+      <p><strong>Name:</strong> {user.name}</p>
+      <p><strong>Email:</strong> {user.email}</p>
+    </div>
+  );
+};
+
+export default App;
