@@ -1224,6 +1224,84 @@ function Profile(){
 }
 
 export default App;
+React Hooks:
+React Reducer ()
+Callback ()
+React Reducer ():
+A reducer is a function that helps to update (like score, a list) based on action we take
+1.	Current State: the current value of a state
+2.	Action: add or remove an item
+3.	import React,{useReducer} from "react";
+4.	import './App.css';
+5.	function appleReducer(state={count:3, apples:[]},action){
+6.	  switch(action.type){
+7.	    case 'ADD_APPLE':
+8.	      return {count: state.count+1, apples: [...state.apples, 'apple']};
+9.	    case 'EAT_APPLE':
+10.	      if(state.count > 0){
+11.	        return {count: state.count-1, apples: state.apples.slice(0, -1)};
+12.	      }
+13.	      return state;
+14.	    default:
+15.	      return state;
+16.	  }
+17.	}
+18.	function App() {
+19.	  const [state,dispatch]=useReducer(appleReducer,{count:3, apples:[]})
+20.	  return (
+21.	    <div className="App">
+22.	      <h1 className="">Apple counter</h1>
+23.	      <p className="heading-count">Number of apples:{state.count}</p>
+24.	      <div>
+25.	        {state.apples.map((apple, index) => (
+26.	          <img className="imageProfile" key={index} src="https://img.freepik.com/free-psd/close-up-delicious-apple_23-2151868346.jpg?t=st=1739511151~exp=1739514751~hmac=3e467c071e62a6eb76901ae07dd6b20ddde0f970fcbdd1b6bf8ce93139a33fd7&w=826" alt="apple" />
+27.	        ))}
+28.	      </div>
+29.	      <button className="btn" onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE</button>
+30.	      <button className="btn" onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+31.	    </div>
+32.	  )
+33.	}
+34.	export default App;
+
+Callback ():
+In react, a callback is function that is passed as an argument to another function
+Call backs are often to communicate with different components.
+Ex: a parent component passing as callback to a child.
+Parent component displays a message; and child component has a button
+When the button is clicked , the child will use callback and tells the parent component to update the msg.
+App.js
+import React,{use, useState} from "react";
+import Child from './React/Child.jsx';
+
+const Parent = () =>{
+  const[message,setmessage] = useState("Hello world");
+
+  const ChangeMessage = () =>{
+    setmessage("Hello from parent");
+  };
+
+return(
+  <div>
+    <h1>{message}</h1>
+    <Child ChangeMessage = {ChangeMessage}/>
+  </div>
+)}
+
+export default Parent;
+
+Child.jsx:
+import React from "react";
+
+const Child =({ChangeMessage}) =>{
+    return(
+        <div>
+            <button onClick={ChangeMessage}>Click Me</button>
+        </div>
+        );
+}
+
+export default Child;
 
 
 Implemented in VScode
