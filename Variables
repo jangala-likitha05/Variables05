@@ -1325,5 +1325,105 @@ function CounterWithPrev(){
 }
 
 export default CounterWithPrev;
+Event Handling:
+Event handling in react is how you make your app do some thing when the user interacts with it, like clicking a button, pressing, mouse moving
+How to use events:
+Use camelCase for event names, pass a function to the event (not a function call). This function will run when the event happens.
+a)	Click event (onClick):
+Eg:
+import React from "react";
+
+function App(){
+  const handleClick = () =>{
+    alert("Button clicked.");
+  };
+
+  return(
+    <div>
+      <button onClick={handleClick}>Click me!</button>
+    </div>
+  )
+}
+
+export default App;
+
+b)	Change event(onChange):
+Forms:
+This happens when you type in a text box.
+Key points:
+Target is a property of the event object, and is predefined by javaScript for DOM events.
+event.target: always refers 
+Eg:
+import React,{useState} from "react";
+
+function App(){
+  const[text,setText] = useState("");
+
+  const handleChange = (event) =>{
+    setText(event.target.value);
+  }
+
+  return(
+    <div>
+      <input type="text" value={text} onChange={handleChange} />
+      <p>Text: {text}</p>
+    </div>
+  )
+}
+
+export default App;
+
+c)	Mouse Events:
+d)	import React,{useState} from "react";
+e)	
+f)	function App(){
+g)	  const[isHovered,setIsHovered] = useState(false);
+h)	
+i)	  const handleMouseEnter = () =>{
+j)	    setIsHovered(true);
+k)	  }
+l)	
+m)	  const handleMouseLeave = () =>{
+n)	    setIsHovered(false);
+o)	  }
+p)	
+q)	  return(
+r)	    <div>
+s)	      <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: isHovered ? 'lightblue':'lightpink',
+t)	        color:isHovered ? 'coral' : 'gray',margin: 30,padding: 20,borderRadius: 10}}>Hover</button>
+u)	        {isHovered && <p style={{fontWeight: 'bold'}}>Mouse is over the button!</p>}
+v)	    </div>
+w)	  )
+x)	}
+y)	
+z)	export default App;
+
+1.	Key events:
+(onKeyDown):
+Key is pressed on the key board:
+Synatx:
+onKeyDown = {keyDownFunction}
+
+== keyDown Function: this a function that runs whenever any key is pressed on the key board
+Eg:
+import React,{useState} from "react";
+
+function App(){
+  const[key,setKey] = useState("");
+  const handleKeyDown = (event) =>{
+    setKey(event.key);
+  }
+
+  return(
+    <div className="App">
+      <h1>welcome to India</h1>
+      {key && <h2>Pressed Key: {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="Press here"/>
+    </div>
+  )
+}
+
+export default App;
+
 
 Implemented in VScode
